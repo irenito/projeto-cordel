@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap'); /* ao importar a fonte- embed, copiar tambem a font-family*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+*{ /* configurações gerais*/
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em; /*configuração padrão */
+}
+
+:root{ /* é uma pseudo-classe, raiz do nosso documento, que servira p todo o documento. Toda variável começa com -- */
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+html, body{
+    min-height: 100vh; /* a altura minima do meu html e body ocupara 100% ou 100vh da minha tela */
+    background-color: darkgray;
+    font-family: var(--fonte1);
+    
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+} 
+
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps; /* nessa as letras ficam todas maiusculas, porem tamanho grande e pequeno;  na text-transform: uppercase, todas as letras ficam maiusculas */;
+    font-family: var(--fonte2);
+    font-size: 10vw; /* ao usar 2,3,..em o tamanho da letra é fixa, aumentando ou diminuindo a tela, podendo a letra ficar muito grande/pequena qdo diminuir ou aumentar a tela, por isso  a melhor opção é usar 10vw, 0 tamanho da letra será 10% de width /largura da minha tela */
+}
+header > p{
+    padding-bottom: 50px;
+
+}
+header a, footer a /* ou pode colocar somente a, sem header, sem footer*/ {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover { /* ou nesse caso, pode colocar somente a:hover, pq nao terá outros links no site*/
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh; /* pra ganhar espaço na section, fazer a rolagem da tela para fazer o efeito parallax, vai ocupar 10% da altura da minha tela e, conforme aumenta e diminui a tela, ele se adapta*/
+    padding-bottom: 10vh;
+    line-height: 2em; /* altura , espaço entre uma linha e outra*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /* a letra será 3.5% da largura da minha tela, aumentando ou diminuindo o tamanho da tela*/
+}
+
+section > p {
+    padding-bottom: 2em;
+
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(53, 52, 52);
+    color: white;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px black; /* horizontal vertical espalhamento e ampliação */
+    background-attachment: fixed; /* fixar a imagem de fundo, a imagem não se movimenta com o texto */
+}
+section.imagem > p { /* coloquei um fundo/caixa no meu paragrafo, para que a imagem nao se misture com o texto, ao inves de colocar a width da caixa em 400px (pois deu problema, teve quebra de linha), coloquei display */
+    background-color: rgba(0, 0, 0, 0.397);
+    display: inline-block; /*transformei em caixa inline-block, pq ela não quebra linha e a caixa é do tamanho do conteudo*/
+    padding: 5px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.696); /* sombras no texto da section imagem p dar uma destacada do fundo-  horizontal,vertical e espalhamento*/
+}
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+    
+} /* 2 pontinhos pq tive q voltar 2 pastas p encontrar a imagem : estou em style.css para pasta estilo e pasta imagens */
+
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
