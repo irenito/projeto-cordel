@@ -83,7 +83,7 @@ section#img01{
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
     
-} /* 2 pontinhos pq tive q voltar 2 pastas p encontrar a imagem : estou em style.css para pasta estilo e pasta imagens */
+} /* ../ pq tive q voltar 1 pasta p encontrar a imagem : estou em style.css para pasta estilo e pasta imagens */
 
 section#img02{
     background-image: url(../imagens/background002.jpg);
